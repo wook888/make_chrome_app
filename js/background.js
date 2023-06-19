@@ -1,9 +1,10 @@
-const images = ["0.jpg", "1.jpg", "2.jpg"];
+const images = ["dog1.jpg", "dog2.jpg", "dog4.jpg", "cat1.jpeg", "cat2.png"];
 
-const chosenImage = images[Math.floor(Math.random() * images.length)];
+const chosenImage = [Math.floor(Math.random() * images.length)];
 
 const bgImage = document.createElement("img");
+const rightBoxImage = document.querySelector("#rightBox");
 
 bgImage.src = `img/${chosenImage}`;
 
-document.body.appendChild(bgImage);
+rightBoxImage.style.backgroundImage = `url('img/${images[chosenImage]}')`;
